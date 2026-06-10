@@ -1,13 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cap Cut</title>
-    <!-- Link external CSS stylesheet here -->
-    <link rel="stylesheet" href="style.css">
-<!-- Meta Pixel Code -->
-<script>
+src/routes/index.tsx
+import { createFileRoute } from "@tanstack/react-router";
+const PIXEL_ID = "2132548637288784";
+export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Your App" },
+      { name: "description", content: "Replace this with a one-sentence description of your app." },
+      { property: "og:title", content: "Your App" },
+      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "Thank you" },
+      { name: "description", content: "Registration complete." },
+      { name: "robots", content: "noindex, nofollow" },
+    ],
+    scripts: [
+      {
+        children: `
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -16,16 +23,45 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2132548637288784');
+fbq('init', '${PIXEL_ID}');
 fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2132548637288784&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-</head>
-<body>
- <!-- Link external JavaScript file here -->
-    <script type="text/javascript">!function(){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src="https://27ii7.bemobtrcks.com/landing/e1369763-acb6-4978-9bff-2c29b1d460fb?callback=REPLACE&rule=REPLACE&path=REPLACE&landing=REPLACE&"+window.location.search.substring(1);var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)}();</script>
-</body>
-</html>
+fbq('track', 'CompleteRegistration');
+        `.trim(),
+      },
+    ],
+  }),
+  component: Index,
+});
+// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
+function Index() {
+  return (
+    <div
+      className="flex min-h-screen items-center justify-center"
+      style={{ backgroundColor: "#fcfbf8" }}
+    >
+      <img
+        data-lovable-blank-page-placeholder="REMOVE_THIS"
+        src="https://cdn.gpteng.co/blank-app-v1.svg"
+        alt="Your app will live here!"
+      />
+    <div className="flex min-h-screen items-center justify-center bg-background px-6">
+      <noscript>
+        <img
+          height="1"
+          width="1"
+          style={{ display: "none" }}
+          src={`https://www.facebook.com/tr?id=${PIXEL_ID}&ev=CompleteRegistration&noscript=1`}
+          alt=""
+        />
+      </noscript>
+      <div className="max-w-md text-center">
+        <h1 className="text-3xl font-semibold tracking-tight text-foreground">
+          Thank you
+        </h1>
+        <p className="mt-3 text-sm text-muted-foreground">
+          Your registration is complete.
+        </p>
+      </div>
+    </div>
+  );
+}
