@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CapCut Pro Creative Toolkit</title>
+  <meta name="description" content="Discover CapCut premium features for faster video editing, creative workflows, and social content production." />
+  <meta name="robots" content="index,follow" />
+
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '2132548637288784');
+    fbq('track', 'PageView');
+    fbq('track', 'ViewContent', {
+      content_name: 'CapCut Pro Bridge Page',
+      content_category: 'Affiliate Landing Page'
+    });
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=2132548637288784&ev=PageView&noscript=1"
+         alt="" />
+  </noscript>
+
+  <style>
+    :root {
+      --bg: #f6f7fb;
+      --surface: #ffffff;
+      --text: #111827;
+      --muted: #4b5563;
+      --border: rgba(17, 24, 39, 0.12);
+      --primary: #111827;
+      --primary-hover: #000000;
+      --secondary: #e5e7eb;
+      --accent: #16a34a;
+      --accent-soft: rgba(22, 163, 74, 0.10);
+      --shadow: 0 10px 35px rgba(0,0,0,0.08);
+      --radius: 20px;
+      --radius-sm: 14px;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(22,163,74,0.05), transparent 30%),
+        linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+    a { text-decoration: none; color: inherit; }
+    .skip-link { position: absolute; left: -9999px; top: auto; }
+    .skip-link:focus {
+      left: 1rem; top: 1rem; background: #fff; color: #111827; padding: 0.75rem 1rem;
+      border-radius: 10px; border: 1px solid var(--border); z-index: 9999;
+    }
+    .container { width: min(var(--max), calc(100% - 2rem)); margin: 0 auto; }
+    header { padding: 1rem 0; }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .brand { display: flex; align-items: center; gap: 0.75rem; font-weight: 700; font-size: 0.95rem; }
+    .brand-mark {
+      width: 42px; height: 42px; border-radius: 12px; background: #111827; color: #fff;
+      display: grid; place-items: center; font-weight: 700;
+    }
+    .nav-button, .btn {
+      display: inline-flex; align-items: center; justify-content: center; min-height: 48px;
+      padding: 0.95rem 1.25rem; border-radius: 999px; font-weight: 700; transition: 0.2s ease;
+    }
+    .nav-button, .btn-primary { background: var(--primary); color: #fff; }
+    .nav-button:hover, .btn-primary:hover, .nav-button:focus-visible, .btn-primary:focus-visible { background: var(--primary-hover); }
+    .btn-secondary { background: var(--secondary); color: var(--text); border: 1px solid var(--border); }
+    main { padding: 2rem 0 4rem; }
+    .hero { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 2rem; align-items: center; }
+    .eyebrow {
+      display: inline-flex; align-items: center; padding: 0.5rem 0.85rem; border-radius: 999px;
+      background: var(--accent-soft); color: #166534; font-size: 0.78rem; letter-spacing: 0.08em;
+      text-transform: uppercase; font-weight: 700; margin-bottom: 1rem;
+    }
+    h1 { font-size: clamp(2.2rem, 4.5vw, 4.5rem); line-height: 1.02; margin-bottom: 1rem; max-width: 13ch; }
+    .lead { color: var(--muted); max-width: 60ch; margin-bottom: 1.5rem; font-size: 1.05rem; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-bottom: 1rem; }
+    .helper { font-size: 0.85rem; color: #6b7280; max-width: 58ch; }
+    .panel {
+      background: rgba(255,255,255,0.82); border: 1px solid rgba(255,255,255,0.75); border-radius: 24px;
+      padding: 1.5rem; box-shadow: var(--shadow); backdrop-filter: blur(10px);
+    }
+    .stack { display: grid; gap: 1rem; }
+    .stat { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; }
+    .stat strong { display: block; font-size: 1.1rem; margin-bottom: 0.35rem; }
+    .section { padding-top: 4rem; }
+    .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .feature {
+      background: rgba(255,255,255,0.8); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 1.25rem; box-shadow: 0 6px 22px rgba(0,0,0,0.04);
+    }
+    .feature h2, .feature h3 { font-size: 1.15rem; margin-bottom: 0.5rem; }
+    .feature p { color: var(--muted); font-size: 0.96rem; }
+    .offer-box {
+      margin-top: 2rem; background: #111827; color: #fff; border-radius: 28px; padding: 2rem;
+      display: grid; grid-template-columns: 1fr auto; gap: 1.5rem; align-items: center;
+    }
+    .offer-box p { color: rgba(255,255,255,0.8); max-width: 55ch; }
+    .offer-box .btn-primary { background: var(--accent); color: #fff; }
+    .offer-box .btn-primary:hover, .offer-box .btn-primary:focus-visible { background: #15803d; }
+    .disclaimer {
+      margin-top: 2rem; border: 1px solid var(--border); border-radius: 16px; background: rgba(255,255,255,0.7);
+      padding: 1rem; color: var(--muted); font-size: 0.85rem;
+    }
+    footer { padding: 2rem 0 3rem; }
+    footer p { color: #6b7280; font-size: 0.82rem; max-width: 70ch; }
+    :focus-visible { outline: 2px solid #2563eb; outline-offset: 3px; }
+    @media (max-width: 900px) {
+      .hero, .features, .offer-box { grid-template-columns: 1fr; }
+      h1 { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header>
+    <div class="container nav">
+      <div class="brand" aria-label="CapCut creative toolkit">
+        <div class="brand-mark" aria-hidden="true">CC</div>
+        <span>CapCut Creative Toolkit</span>
+      </div>
+
+      <a
+        class="nav-button tracked-cta"
+        href="https://27ii7.bemobtrcks.com/click"
+        target="_blank"
+        rel="noopener noreferrer"
+        data-location="header"
+      >
+        Explore CapCut Pro
+      </a>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Creator workflow</div>
+        <h1>Edit faster with premium tools for modern content creation.</h1>
+        <p class="lead">
+          Review CapCut’s premium editing experience, creator-focused features, and current subscription options through the official destination page.
+        </p>
+
+        <div class="cta-row">
+          <a
+            class="btn btn-primary tracked-cta"
+            href="https://27ii7.bemobtrcks.com/click"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-location="hero-primary"
+          >
+            Unlock premium features
+          </a>
+
+          <a
+            class="btn btn-secondary tracked-cta"
+            href="https://27ii7.bemobtrcks.com/click"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-location="hero-secondary"
+          >
+            View subscription details
+          </a>
+        </div>
+
+        <p class="helper">
+          Clicking a button records the landing-page event and then sends the visitor through your BeMob campaign flow to the destination offer.
+        </p>
+      </div>
+
+      <aside class="panel" aria-label="Highlights">
+        <div class="stack">
+          <div class="stat">
+            <strong>Premium editing workflow</strong>
+            <span>Useful for creators who want faster content production and more polished short-form video output.</span>
+          </div>
+          <div class="stat">
+            <strong>Social-first content tools</strong>
+            <span>Relevant for reels, shorts, promos, tutorials, creator clips, and ad creative workflows.</span>
+          </div>
+          <div class="stat">
+            <strong>Tracked through BeMob</strong>
+            <span>Your CTA sends the visit through BeMob so click data and downstream MaxBounty conversion attribution can be connected properly.</span>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section" aria-labelledby="feature-title">
+      <div class="features">
+        <article class="feature">
+          <h2 id="feature-title">Faster production</h2>
+          <p>Bridge pages help warm up the click before sending the visitor to the subscription page.</p>
+        </article>
+
+        <article class="feature">
+          <h3>Cleaner attribution</h3>
+          <p>Meta can optimize on your landing-page events while BeMob and MaxBounty handle the actual affiliate conversion path.</p>
+        </article>
+
+        <article class="feature">
+          <h3>Simple next step</h3>
+          <p>The visitor reviews the current offer, plan details, and eligibility on the destination page after clicking through.</p>
+        </article>
+      </div>
+
+      <div class="offer-box">
+        <div>
+          <h2 style="font-size: clamp(1.5rem, 2.5vw, 2.2rem); margin-bottom: 0.75rem;">Check the current CapCut offer</h2>
+          <p>
+            Continue through the tracked link to review the current subscription page, availability, and regional eligibility.
+          </p>
+        </div>
+
+        <a
+          class="btn btn-primary tracked-cta"
+          href="https://27ii7.bemobtrcks.com/click"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-location="bottom-cta"
+        >
+          Continue to offer
+        </a>
+      </div>
+
+      <div class="disclaimer">
+        This is a promotional landing page, not the final checkout page. Final conversion, plan details, eligibility, and subscription completion occur on the destination site and are governed by the affiliate network’s rules and the destination offer terms.
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        This page contains affiliate tracking links. On-page activity can be tracked with Meta Pixel, while final offer attribution is handled through BeMob and MaxBounty.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const trackedLinks = document.querySelectorAll('.tracked-cta');
+
+      trackedLinks.forEach(function (link) {
+        link.addEventListener('click', function () {
+          const destination = link.getAttribute('data-location') || 'unknown';
+
+          fbq('track', 'Lead', {
+            content_name: 'CapCut CTA Click',
+            content_category: 'Affiliate Landing Page',
+            source: destination
+          });
+
+          fbq('trackCustom', 'BeMobOutboundClick', {
+            destination_section: destination,
+            traffic_platform: 'Meta Ads'
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
